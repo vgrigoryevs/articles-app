@@ -7,38 +7,28 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet" href="styles.css">
 <!--[if lt IE 9]>
 <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 <link rel="shortcut icon" href="">
+
 </head>
-<body>
+<body onload="MYAPP.article.includeJsonDoc('art', 'text/article.json')">
 	<div class="wrapper">
 		<nav id="nav">    
 		    <ul id="navList">
 		    </ul>
 		</nav>
 
-		<div id="navButton" onclick="MYAPP.navigation.moveNavigation(this.previousSibling.previousSibling)">
-		    <img src="img/menu.png">    
+		<div id="navButton" onclick="MYAPP.navigation.moveNavigation(getElementById('nav'))">
+		   <i class="fa fa-bars fa-3x"></i>
 		</div>	
 
-			<article onclick="MYAPP.navigation.moveFromBody(getElementById('nav'));">
-			    <h1>Очень важная и интересная статья</h1>
-			    <h2>Пункт Первый</h2>
-			    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pharetra magna id facilisis fermentum. Phasellus sit amet sagittis mauris. Proin accumsan arcu facilisis felis auctor, id elementum est pulvinar. Aenean at nulla ut neque feugiat euismod. Maecenas vulputate faucibus elementum. Proin efficitur venenatis lobortis. In tincidunt nisl dictum dapibus varius. Vivamus ullamcorper enim vel lectus porta aliquam.</p>
-			    <h2>Пункт Второй</h2>
-			    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pharetra magna id facilisis fermentum. Phasellus sit amet sagittis mauris. Proin accumsan arcu facilisis felis auctor, id elementum est pulvinar. Aenean at nulla ut neque feugiat euismod. Maecenas vulputate faucibus elementum. Proin efficitur venenatis lobortis. In tincidunt nisl dictum dapibus varius. Vivamus ullamcorper enim vel lectus porta aliquam.</p>
-			    <h2>Пункт Третий</h2>
-			    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pharetra magna id facilisis fermentum. Phasellus sit amet sagittis mauris. Proin accumsan arcu facilisis felis auctor, id elementum est pulvinar. Aenean at nulla ut neque feugiat euismod. Maecenas vulputate faucibus elementum. Proin efficitur venenatis lobortis. In tincidunt nisl dictum dapibus varius. Vivamus ullamcorper enim vel lectus porta aliquam.</p>
-			    <h2>Пункт Четвертый</h2>
-			    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pharetra magna id facilisis fermentum. Phasellus sit amet sagittis mauris. Proin accumsan arcu facilisis felis auctor, id elementum est pulvinar. Aenean at nulla ut neque feugiat euismod. Maecenas vulputate faucibus elementum. Proin efficitur venenatis lobortis. In tincidunt nisl dictum dapibus varius. Vivamus ullamcorper enim vel lectus porta aliquam.</p>
-			    <h2>Пункт Пятый</h2>
-			    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pharetra magna id facilisis fermentum. Phasellus sit amet sagittis mauris. Proin accumsan arcu facilisis felis auctor, id elementum est pulvinar. Aenean at nulla ut neque feugiat euismod. Maecenas vulputate faucibus elementum. Proin efficitur venenatis lobortis. In tincidunt nisl dictum dapibus varius. Vivamus ullamcorper enim vel lectus porta aliquam.</p>
-				<br>
-				<p id="goBack"><a href="index.html">Назад к списку статей</a></p>
+			<article onclick="MYAPP.navigation.moveFromBody(getElementById('nav'));" id="art">
+			   <p id="goBack"><a href="index.html">Назад к списку статей</a></p>
 			</article>
 	</div> 
 

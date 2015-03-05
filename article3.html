@@ -14,20 +14,21 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 <link rel="shortcut icon" href="">
+
 </head>
-<body onload="MYAPP.article.includeHtmlDoc('art', 'text/article1.html')">
+<body onload="MYAPP.article.includeJsonDoc('art', 'text/article.json')">
 	<div class="wrapper">
 		<nav id="nav">    
 		    <ul id="navList">
 		    </ul>
 		</nav>
 
-		<div id="navButton" onclick="MYAPP.navigation.moveNavigation(getElementById('nav'))">
+		<div id="navButton" onclick="MYAPP.navigation.moveNavigationWithCss(document.getElementById('nav'), this)">
 		   <i class="fa fa-bars fa-3x"></i>
 		</div>	
 
-			<article onclick="MYAPP.navigation.moveFromBody(getElementById('nav'));" id="art">
-				<p id="goBack"><a href="index.html">Назад к списку статей</a></p>
+			<article id="art" onclick="MYAPP.navigation.moveNavigationWithCss(document.getElementById('nav'), this)">
+			   <p id="goBack"><a href="index.html">Назад к списку статей</a></p>
 			</article>
 	</div> 
 
